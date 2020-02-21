@@ -1,0 +1,179 @@
+<html>
+<head>
+<title>shop online</title>
+<script type="text/javascript" src ="validation.js"></script>
+<style>
+	.NavigateBar {
+	
+	background-color: rgb(149,207,13);
+	padding : 15px
+	}
+	.content{
+		margin-left: 16%;	
+	}
+	.column {
+		float: left;
+		margin-top: 5%;
+		margin-left: 5%;
+	}
+	.Margin{
+		margin-left: 16%;	
+		margin-top: 0%;
+	}
+	.footer {
+	position: absolute;
+	background-color: YellowGreen;
+	height: 65px;
+	top: 1200px;
+	width: 99%;
+	color: #004466;
+	font-size: 30px;
+	text-align: center;
+	margin-top: 100px;
+	font-family: cambria;
+	padding-top: .5%;
+}
+</style>
+</head>	  
+	  <body>
+	<h2> FLOWER SHOP ONLINE </h2>
+	 <div class="NavigateBar"></div>
+	  <div class="column">
+                        <img src="flowerpic.jpg" alt="Flowers"width="80" height="90">
+        </div>  
+  <form class="form">
+  <div class="content"	>
+	<h3>Secure Payment Page </h3>
+	<table  cellpadding=5 ><tr>
+		<td>Selected Language</td> 
+		<td><select name="Language" id="Language"> 
+				<option value = "English" selected>English</option>
+				<option value = "Tamil">Tamil</option>
+				<option value = "French">French</option>
+				<option value = "German">German</option>
+			
+			</select></td></tr><tr>
+			<td>Payment method</td>
+			<td><b>visa</b></td></tr><tr>
+			<td>Description</td>
+			<td><b>Item ordered</b></td></tr><tr>
+			<td>Amount</td>
+			<td><b>&euro; 100.00</b></td>
+			<td rowspan="5" id="picture" ><img  src="visa.png" alt="Flowers"width="50"></td></tr></table></div>
+		
+		
+		<div class="content"> 
+		
+	
+		<table bgcolor="#ffb57d" cellpadding=5><tr>
+		<td colspan="4" style="color:white;background-color: rgb(149,207,13);">Card details </td> </tr><tr>
+		<td color="#ffb57d">You must fill in fields marked with *</td> </tr>
+		<tr>
+		<td> *Card number  </td>
+		<td><input type = "text" size= 50% maxlength="16"  required onchange="myFunction()"; name= "CardNumber"><span id="card" style="color: red;"></span></td></tr><tr>
+		<td> *Security code  </td>
+		<td><input type = "text"   name= "Securitycode" onchange="ValidationForm()"/><td></tr><tr>
+		<td> *Expiry date  </td>
+		<td><select name = "month" onclick ="ValidationForm()" id="month"> 
+            <option value = "01" selected>01</option>
+            <option value = "02">02</option>
+			<option value = "03">03</option>
+			<option value = "04">04</option>	
+         </select>
+			<select name = "Year" id="year"> 
+			<option value = "2020" selected>2020</option>
+			<option value = "2021">2021</option>
+			<option value = "2022">2022</option>
+			<option value = "2023">2023</option>	
+         </select></td></tr><tr>
+		<td > *Cardholder's name  </td>
+		<td><input type = "text" size= 50% required name = "cardholdersname" maxlength="20" onchange="CheckName()"><br>
+                <span id="holderName" style="color: red;"></span></td>
+		</tr></table>
+	<table bgcolor="#ffb57d" cellpadding=5>
+		<tr><td colspan="4" style="color:white;background-color: rgb(149,207,13);">Cardholder's details</td> </tr>
+		<tr><td>You must fill in fields marked with *</td> </tr>
+		<tr>
+		<td> *Address1 </td>
+		<td><input type = "text" size= 50% required name = "Address1" onchange="CheckAddress()"><span id="location1" style="color: red;></span></td><td>
+		</tr>
+		<tr>
+		<td>  Address2 </td>
+		<td><input type = "text" size= 50% name = "Address2" /><td>
+		</tr>
+		<tr>
+		<td>  Address3 </td>
+		<td><input type = "text" size= 50% name = "Address3" /><td>
+		</tr>
+		<tr>
+		<td> *Town/City </td>
+		<td><input type = "text" size= 30% name = "Town/City" /><td>
+		</tr>
+		<tr>
+		<td>  Region </td>
+		<td><input type = "text" name = "Region" /><td>
+		</tr>
+		<tr>
+		<td> *Postalcode/Zipcode </td>
+		<td><input type = "text" required name = "Postalcode/Zipcode" maxlength="6" onchange="CheckZipCode()"><br><span id="postCode" style="color: red;"></span></td>
+		</tr>
+		<tr>
+		<td>*Country</td> 
+        <td><select name="Country" required id="Country"> 
+            <option value = "United Kingdom" selected>United Kingdom</option>
+            <option value = "India">India</option>
+			<option value = "Italy">Italy</option>
+			<option value = "Germany">Germany</option>
+			
+         </select> </td></tr>
+		<tr>
+		<td>  Telephone </td>
+		<td><input type = "text" name = "Telephone" onchange="CheckTelephone()"><span id="telephone" style="color: red;"></span></td>
+		</tr>
+		<tr>
+		<td>  Fax </td>
+		<td><input type = "text" name = "Fax" /><td>
+		</tr>
+		<tr>
+		<td> *Email </td>
+		<td><input type = "text" size= 50% required name = "Email" onclick="CheckEmailId()" ><span id="emailId" style="color: red;"></span></td>
+		</tr>
+		</table>
+	</div>
+	<div class="Margin">
+                <img src="Reloading.jpg" alt="icon"width="15">
+                <a href="#" style = "text-decoration: none; ">START AGAIN</a>
+	
+                <a  href="#"  input type= "submit" onchange ="ValidationForm()" style = "text-decoration: none;text-indent: 100px; margin-left: 36%;">MAKE PAYMENT</a>
+                <img src="images.png" alt="icon"width="15">
+                 <br>
+                 <br>
+                 <img src="cancel.png" alt="icon"width="15"> 
+                 <a href="#" style = "text-decoration: none;">CANCEL</a> 
+                    <hr style="border-color: rgb(122, 138, 34);">
+             </div>  
+             <div class="Margin">
+             <table>
+                 <tr>
+                     <td style="color:blue">Refunds and Returns</td>
+                 </tr>
+                 <tr>
+                     <td style="font-size:small;color:rgb(69, 69, 150)">For more information visit our <a href="@">Refunds and returns policy</a></td>
+                 </tr>
+                 <tr>
+                     
+                     <td colspan="1" style="font-size:x-small;color: blue;">Payments Powered By</td>
+                     
+                     <td rowspan="2" style="font-size: small;color:black" >For help with your Payments visit the <a href="#" style="color:black">WorldPay help</a> </td>
+                 </tr>
+                 <tr>
+                    <td colspan="1" style="color:blue" >WorldPay</td>
+                 </tr>
+             </table>
+             </div>
+            <div class="footer">
+				<b>Thank you for shopping at Flowershop. Have a nice day</b>
+		</div>
+	</form>
+		</body>
+			</html>
